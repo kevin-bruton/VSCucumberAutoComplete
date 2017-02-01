@@ -89,7 +89,7 @@ function handleLine(line: String): StepLine {
     let stepPart = line.replace(gerkinRegEx, '');
     let stepMatch;
     for (let i = 0; i < steps.length; i++) {
-        if (line.trim().match(steps[i].reg) || stepPart.search(steps[i].reg) !== -1) {
+        if (stepPart.search(steps[i].reg) !== -1) {
             stepMatch = steps[i];
             break;
         }
